@@ -1,6 +1,6 @@
 # Maintainer: tunnelpojken
 pkgname=magi-anime
-pkgver=1.2.0
+pkgver=1.2.1
 pkgrel=1
 pkgdesc="Anime terminal app powered by anipy-api"
 arch=('x86_64')
@@ -8,12 +8,15 @@ url="https://github.com/tunnelpojken/magi-anime"
 license=('MIT')
 depends=('gtk3' 'util-linux-libs' 'xz')
 source=("$pkgname-$pkgver.tar.gz::https://github.com/tunnelpojken/magi-anime/releases/download/v$pkgver/magi_anime-$pkgver-linux-x64.tar.gz")
-sha256sums=('7f335cc927b86314ce76918a7f6ae6f7bdbbf76393fac82a4b7a977c9e98f6b3')
+sha256sums=('465973947b5c88864da1a10912da07546ad2df69d64a7ab6ef8a3b7bb4c0df10')
 
 package() {
     install -dm755 "$pkgdir/opt/magi-anime"
     cp -r "$srcdir/bundle/." "$pkgdir/opt/magi-anime/"
     chmod +x "$pkgdir/opt/magi-anime/magi_anime"
+
+    install -Dm644 "$pkgdir/opt/magi-anime/data/flutter_assets/assets/icon.png" \
+      "$pkgdir/usr/share/pixmaps/magi-anime.png"
 
     install -dm755 "$pkgdir/usr/bin"
     ln -s /opt/magi-anime/magi_anime "$pkgdir/usr/bin/magi-anime"
