@@ -15,8 +15,8 @@ package() {
     cp -r "$srcdir/bundle/." "$pkgdir/opt/magi-anime/"
     chmod +x "$pkgdir/opt/magi-anime/magi_anime"
 
-    install -Dm644 "$pkgdir/opt/magi-anime/data/flutter_assets/assets/icon.png" \
-      "$pkgdir/usr/share/pixmaps/magi-anime.png"
+    install -Dm644 "$srcdir/bundle/data/flutter_assets/assets/icon.png" \
+    "$pkgdir/usr/share/pixmaps/magi-anime.png"
 
     install -dm755 "$pkgdir/usr/bin"
     ln -s /opt/magi-anime/magi_anime "$pkgdir/usr/bin/magi-anime"
