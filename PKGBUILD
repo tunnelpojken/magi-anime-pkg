@@ -1,6 +1,6 @@
 # Maintainer: tunnelpojken
 pkgname=magi-anime
-pkgver=1.0.8
+pkgver=1.0.9
 pkgrel=1
 pkgdesc="Anime terminal app powered by anipy-api"
 arch=('x86_64')
@@ -8,7 +8,7 @@ url="https://github.com/tunnelpojken/magi-anime"
 license=('MIT')
 depends=('gtk3' 'util-linux-libs' 'xz')
 source=("$pkgname-$pkgver.tar.gz::https://github.com/tunnelpojken/magi-anime/releases/download/v$pkgver/magi_anime-$pkgver-linux-x64.tar.gz")
-sha256sums=('4507bfe89a7e2c11626b81675c5ccda169b0f1131aa46e0b66de5646ec93fa09')
+sha256sums=('73a060db914eed3317f12b18136ed86f9bb86a79eec6cb8cb4d017915e77effb')
 
 package() {
     install -dm755 "$pkgdir/opt/magi-anime"
