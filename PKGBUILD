@@ -8,7 +8,7 @@ url="https://github.com/tunnelpojken/magi-anime"
 license=('MIT')
 depends=('gtk3' 'util-linux-libs' 'xz')
 source=("$pkgname-$pkgver.tar.gz::https://github.com/tunnelpojken/magi-anime/releases/download/v$pkgver/magi_anime-$pkgver-linux-x64.tar.gz")
-sha256sums=('50bb6ad64b6e81a013dfbd525a23bee5e1170a8089a5a2eea50c2c451eed3078')
+sha256sums=('fbff2409774f8443901ee5bacafbd93e8a61d108f21f482b8d061b10901a7883')
 
 package() {
     install -dm755 "$pkgdir/opt/magi-anime"
