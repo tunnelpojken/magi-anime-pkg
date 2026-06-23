@@ -26,7 +26,7 @@ package() {
 [Desktop Entry]
 Name=MAGI
 Comment=Anime Terminal
-Exec=/opt/magi-anime/magi_anime
+Exec=/opt/magi-anime/magi_anime --enable-software-rendering
 Icon=magi-anime
 Type=Application
 Categories=AudioVideo;Video;
